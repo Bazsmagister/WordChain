@@ -6,3 +6,5 @@ How to use it?
     Run composer install
     Run php artisan key:generate
     (Later I will seed some fake datas)
+    
+    still in progress....
