@@ -9,4 +9,4 @@
 
 </div>
 
-@include('footer')
+@include ('footer')
