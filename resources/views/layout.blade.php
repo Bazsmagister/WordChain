@@ -19,7 +19,7 @@ Design by TEMPLATED
 http://templated.co
 Released for free under the Creative Commons Attribution License
 
-Name       : SimpleWork 
+Name       : SimpleWork
 Description: A two-column, fixed-width design with dark color scheme.
 Version    : 1.0
 Released   : 20140225
@@ -32,11 +32,11 @@ Released   : 20140225
 
 <body>
 
-@yield ('header')
+ @include ('header')
 
 
     <div id="header-wrapper">
-        
+
         <div id="header-featured">
             <div id="banner-wrapper">
                 <div id="banner" class="container">
@@ -97,9 +97,10 @@ Released   : 20140225
             </div>
         </div>
     </div>
-    
+
 </body>
 
-@yield ('footer')
+
+@include ('footer')
 
 </html>
