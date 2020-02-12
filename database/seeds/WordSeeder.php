@@ -1,5 +1,5 @@
 <?php
-
+use App\Word;
 use Illuminate\Database\Seeder;
 
 class WordSeeder extends Seeder
@@ -11,6 +11,7 @@ class WordSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $this->call(WordsTableSeeder::class);
+        //$this->call(WordsTableSeeder::class, 1)->create();
     }
 }
