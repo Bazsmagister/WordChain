@@ -1,11 +1,11 @@
 @include ('header')
 
 
-<h1>
+<h2>
 
-    <a href="https://github.com/Bazsmagister">Visit me</a>
+    <a href="https://github.com/Bazsmagister">About me</a>
 
-</h1>
+</h2>
 
 
 
