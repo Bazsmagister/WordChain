@@ -4,13 +4,15 @@
 
 use App\Word;
 use Faker\Generator as Faker;
+use Illuminate\Support\Str;
 
 $factory->define(Word::class, function (Faker $faker) {
     return [
         //'name' => $faker->name,
-        'created_at' => now(),
-        'a' => 'a' . (Str::random(10)),
-        'b' => 'b' . (Str::random(10)),
+
+         //'a' => ('a' . (Str::random(10))),
+        'a' => 'a' . $faker->word(),
+        'b' => 'b' . $faker->word(),
         'c' => 'c' . (Str::random(10)),
         'd' => 'd' . (Str::random(10)),
         'e' => 'e' . (Str::random(10)),
@@ -31,14 +33,17 @@ $factory->define(Word::class, function (Faker $faker) {
         't' => 't' . (Str::random(10)),
         'u' => 'u' . (Str::random(10)),
         'v' => 'v' . (Str::random(10)),
-        'w' => 'w' . (Str::random(10)),
+        //'w' => 'w' . (Str::random(10)), w doesn't work
         'x' => 'x' . (Str::random(10)),
         'y' => 'y' . (Str::random(10)),
-        'z' => 'z' . (Str::random(10)),
+        'z' => 'z' . (Str::random(10))
+        //'created_at' => now(),
+        //'updated_at' => now()
+
 
 
         /*
-  )      'a' => 'a' . Str::random(10),
+        'a' => 'a' . Str::random(10),
         'b' => 'b' . Str::random(10),
         'c' => 'c' . Str::random(10),
         'd' => 'd' . Str::random(10),

@@ -15,8 +15,8 @@ class CreateWordsTable extends Migration
     {
         Schema::create('words', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->timestamps();
-            $table->timestamp('created_at')->nullable();
+            //$table->timestamp('created_at')->nullable();
+            //$table->timestamp('updated_at')->nullable();
             $table->string('a');
             $table->string('b');
             $table->string('c');
@@ -39,9 +39,11 @@ class CreateWordsTable extends Migration
             $table->string('t');
             $table->string('u');
             $table->string('v');
+        //$table->string('w');
             $table->string('x');
             $table->string('y');
             $table->string('z');
+            //$table->timestamps();
         });
     }
 

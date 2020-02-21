@@ -35,9 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                 @csrf
-                Your word: <input type="text" name="userword" value="" ><br>
+                Your word:
+            <input type="text" name="userword" value="" onchange="hide_it()" ><br>
 
-            <input type="submit" name="submit" value="Submit">
+                <input type="submit" name="submit" value="Submit">
 
             </form>
             <div>
@@ -61,8 +62,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <br>
                 My word is: {{--   --}}
                 <br>
-                Your turn again:
-                <button type="submit">Again</button>
+
+                <script>
+                    function myFunction hide_it() {
+                    document.getElementById("invisible").style.visibility = "hidden";
+                    }
+                </script>
+                <p id="invisible">
+                Your turn again!
+                </p>
 
 
 
