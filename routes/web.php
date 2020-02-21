@@ -15,11 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/rules', function () {
-    return view('rules');
+Route::get('/game', function () {
+    return view('game');
+});
+
+Route::post('/game', function () {
+    return view('game');
 });
 
 Route::get('/about_me', function () {
     return view('about_me');
 
 });
+

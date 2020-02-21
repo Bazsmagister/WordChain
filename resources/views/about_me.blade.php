@@ -1,11 +1,17 @@
 @include ('header')
 
+<div id="header-wrapper">
 
-<h2>
+    <div id="header-featured">
+        <div id="banner-wrapper">
+            <div id="banner" class="container">
+                <a href="https://github.com/Bazsmagister">About me</a>
 
-    <a href="https://github.com/Bazsmagister">About me</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-</h2>
 
 
 

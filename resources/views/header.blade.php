@@ -6,8 +6,8 @@
 
     <div id="menu">
         <ul>
-            <li class="current_page_item"><a href="/" accesskey="1" title="">Homepage</a></li>
-            <li><a href="rules" accesskey="2" title="">Rules</a></li>
+            <li class="current_page_item"><a href="/" accesskey="1" title="">Welcome</a></li>
+            <li><a href="game" accesskey="2" title="">Game</a></li>
             <li><a href="about_me" accesskey="3" title="">About Me</a></li>
 
         </ul>

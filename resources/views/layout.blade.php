@@ -39,7 +39,10 @@ Released   : 20140225
             <div id="banner-wrapper">
                 <div id="banner" class="container">
                     <h2>Wordchain game</h2>
-                    <a href="#" class="button">Let's start</a>
+                    <h3>Pick a word, and I will find an other with your word's last letter.
+                        Enjoy!</h3>
+
+                    <a href="/game" class="button">Let's start</a>
                 </div>
             </div>
         </div>
