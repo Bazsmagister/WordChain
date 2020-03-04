@@ -28,3 +28,7 @@ Route::get('/about_me', function () {
 
 });
 
+
+Route::get('/words', function () {
+    return view('words');
+});

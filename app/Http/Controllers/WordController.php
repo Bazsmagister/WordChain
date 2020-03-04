@@ -14,7 +14,8 @@ class WordController extends Controller
      */
     public function index()
     {
-        //
+    $words = App\Word::all();
+    return view('words', compact('words'));
     }
 
     /**

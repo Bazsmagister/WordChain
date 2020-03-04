@@ -11,7 +11,9 @@ class WordSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(WordsTableSeeder::class);
+        //$this->call(WordsTableSeeder::class);
         //$this->call(WordsTableSeeder::class, 1)->create();
+        //$this->call(App\Word::class, 5)->create();
+        factory(App\Word::class, 5)->create();
     }
 }
