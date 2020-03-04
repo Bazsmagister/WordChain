@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Word;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class WordController extends Controller
 {
@@ -14,7 +15,10 @@ class WordController extends Controller
      */
     public function index()
     {
-    $words = App\Word::all();
+    //$words = Word::get();
+    //$words = DB::Word->get();
+
+    $words = Word::simplePaginate(5);
     return view('words', compact('words'));
     }
 

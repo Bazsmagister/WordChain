@@ -11,9 +11,16 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+Route::get('/', function () {
+    return view('words');
+});
+*/
 
 Route::get('/game', function () {
     return view('game');
@@ -28,7 +35,13 @@ Route::get('/about_me', function () {
 
 });
 
-
+/*
 Route::get('/words', function () {
     return view('words');
 });
+*/
+
+
+
+Route::resource('words', 'WordController');
+
