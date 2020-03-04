@@ -1,4 +1,4 @@
-@include ('header')
+@include ('includes.header')
 
 <div id="header-wrapper">
 
@@ -15,4 +15,4 @@
 
 
 
-@include ('footer')
+@include ('includes.footer')

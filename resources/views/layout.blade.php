@@ -15,7 +15,7 @@
 
 <body>
 
- @include ('header')
+ @include ('includes.header')
 
 
     <div id="header-wrapper">
@@ -37,6 +37,6 @@
 </body>
 
 
-@include ('footer')
+@include ('includes.footer')
 
 </html>

@@ -1,4 +1,4 @@
-@include ('header')
+@include ('includes.header')
 
 <?php
 $userword = "";
@@ -87,4 +87,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </div>
 
-@include ('footer')
+@include ('includes.footer')

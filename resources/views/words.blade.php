@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+@include('includes.header')
 <body>
     <body>
 
@@ -314,7 +315,7 @@
         @endforeach
 
 
-
+        @include('includes.footer')
     </body>
 </body>
 </html>
