@@ -34,9 +34,23 @@
     </div>
 
 
+
+
+    <div id="example" class="title m-b-md">
+
+    </div>
+
+
+
+
+
+
+
 </body>
 
 
 @include ('includes.footer')
+
+<script src="js/app.js"></script>
 
 </html>
