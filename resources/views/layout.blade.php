@@ -44,13 +44,13 @@
 
 
 
+    @include ('includes.footer')
 
+    <script src="js/app.js"></script>
 
 </body>
 
 
-@include ('includes.footer')
 
-<script src="js/app.js"></script>
 
 </html>

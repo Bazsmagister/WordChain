@@ -8,9 +8,9 @@ use Illuminate\Support\Str;
 
 $factory->define(Word::class, function (Faker $faker) {
     return [
+        'words' => 'a' . $faker->word(),'b' . $faker->word(),
         //'name' => $faker->name,
-
-         //'a' => ('a' . $faker->word()),
+        /*
         'a' => 'a' . $faker->word(),
         'b' => 'b' . $faker->word(),
         'c' => 'c' . $faker->word(),
@@ -39,6 +39,8 @@ $factory->define(Word::class, function (Faker $faker) {
         'z' => 'z' . $faker->word()
         //'created_at' => now(),
         //'updated_at' => now()
+        */
+
 
 
 

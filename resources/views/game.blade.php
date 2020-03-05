@@ -1,28 +1,5 @@
 @include ('includes.header')
 
-<?php
-$userword = "";
-
-//  With vanilla php you need validate the request:
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $userword = test_input($_POST["userword"]);
-
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-
-/*
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $userword = $_POST["userword"];
-*/
-
-?>
 
 <div id="header-wrapper">
 
@@ -31,52 +8,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div id="banner" class="container">
                 Pick a word!
 
-
-            <div>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-                @csrf
-                Your word:
-            <input type="text" name="userword" value="" onchange="hide_it()" ><br>
-
-                <input type="submit" name="submit" value="Submit">
-
-            </form>
-            <div>
+                <div>
+                    <form action="/words" method="POST">
+                        @csrf
+                        Your word:
+                        <input type="text" name="word">
+                        <br>
+                        <button type="submit">Submit</button>
 
 
-                <?php
-                /*
-                With vanilla php :
-                echo "<h4>Your word was: </h4>";
-                echo $userword;
-                */
-                ?>
-                <br>
+                    </form>
+                    <div>
 
-                <?php
+
+                        <!-- if there are creation errors, they will show here -->
+                       @if ($errors->all())
+                       echo $errors;
+                       @endif
+
+
+
+
+
+
+                        <?php
                 //With Laravel:
                 ?>
-                Your word was: {{$userword}}
+                        Your word was:
 
 
-                <br>
-                My word is: {{--   --}}
-                <br>
+                        <br>
+                        My word is: {{--   --}}
+                        <br>
 
-                <script>
-                    function myFunction hide_it() {
-                    document.getElementById("invisible").style.visibility = "hidden";
-                    }
-                </script>
-                <p id="invisible">
-                Your turn again!
-                </p>
+                        <script>
+
+                        </script>
+                        <p id="invisible">
+                            Your turn again!
+                        </p>
 
 
 
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
         </div>
     </div>
 </div>

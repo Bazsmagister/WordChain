@@ -5,4 +5,6 @@ How to use it?
     Copy .env.example file to .env and edit database credentials there
     Run composer install
     Run php artisan key:generate
-    (Later I will seed some fake datas)
+  
+
+  Added React to it

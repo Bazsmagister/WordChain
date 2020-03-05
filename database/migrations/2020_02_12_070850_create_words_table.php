@@ -15,8 +15,10 @@ class CreateWordsTable extends Migration
     {
         Schema::create('words', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('words');
             //$table->timestamp('created_at')->nullable();
             //$table->timestamp('updated_at')->nullable();
+            /*
             $table->string('a');
             $table->string('b');
             $table->string('c');
@@ -44,6 +46,7 @@ class CreateWordsTable extends Migration
             $table->string('y');
             $table->string('z');
             //$table->timestamps();
+            */
         });
     }
 
