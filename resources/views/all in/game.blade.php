@@ -1,27 +1,5 @@
 @include ('includes.header')
 
-<?php
-/*
-$userword = "";
-//  With vanilla php you need validate the request:
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $userword = test_input($_POST["userword"]);
-
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-*/
-
-/*
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $userword = $_POST["userword"];
-*/
-?>
 
 <div id="header-wrapper">
 
@@ -42,15 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
             <div>
 
-
-                <?php
-                /*
-                With vanilla php :
-                echo "<h4>Your word was: </h4>";
-                echo $userword;
-                */
-                ?>
-                <br>
 
                 <?php
                 //With Laravel:
@@ -87,3 +56,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 @include ('includes.footer')
+"{{ route('logout') }}"

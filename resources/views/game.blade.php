@@ -9,7 +9,7 @@
                 Pick a word!
 
                 <div>
-                    <form action="/words" method="POST">
+                    <form action="/words"  method="POST">
                         @csrf
                         Your word:
                         <input type="text" name="word">
@@ -23,7 +23,7 @@
 
                         <!-- if there are creation errors, they will show here -->
                        @if ($errors->all())
-                       echo $errors;
+                            {{$errors}}
                        @endif
 
 
@@ -41,12 +41,6 @@
                         My word is: {{--   --}}
                         <br>
 
-                        <script>
-
-                        </script>
-                        <p id="invisible">
-                            Your turn again!
-                        </p>
 
 
 
