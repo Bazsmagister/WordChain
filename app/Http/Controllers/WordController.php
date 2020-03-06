@@ -82,17 +82,40 @@ class WordController extends Controller
         $z = $request->input('z');
         */
 
-        //$word = new Word;
-        $word = $request->word;
+        //$input = $request->all();
+        //dd($input);
+        //dd($input=>word);
+        $word = new Word;
+        //$word = $request->query('word');
+        //$word = Word::create($request->all());
+        $rword = $request->word;
+        //dd($word);
         // ord Returns the ASCII value of the first character of a string
-        $firstletter = ord($word);
-        dd($firstletter);
+        $wordlovercase = strtolower($rword);
+        $firstletter = ord($wordlovercase);
+        //dd($firstletter);
+        switch ($firstletter) {
+            case '97':
+               // $word = $request->query('word');
+                $word = new Word;
+                $word -> a = $request->word;
+                //dd($word->a);
+                //dd($word);
+                $word->save();
+
+                break;
+
+            default:
+                # code...
+                break;
+        }
+
         //dd($word);
         /*
         $input = $request->input();
         dd($input);
         */
-        $word->save();
+        //$word->save();
 
         // redirect
         Session::flash('message', 'Successfully created word!');
