@@ -15,38 +15,38 @@ class CreateWordsTable extends Migration
     {
         Schema::create('words', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('words');
+            //$table->string('words');
             //$table->timestamp('created_at')->nullable();
             //$table->timestamp('updated_at')->nullable();
-            /*
-            $table->string('a');
-            $table->string('b');
-            $table->string('c');
-            $table->string('d');
-            $table->string('e');
-            $table->string('f');
-            $table->string('g');
-            $table->string('h');
-            $table->string('i');
-            $table->string('j');
-            $table->string('k');
-            $table->string('l');
-            $table->string('m');
-            $table->string('n');
-            $table->string('o');
-            $table->string('p');
-            $table->string('q');
-            $table->string('r');
-            $table->string('s');
-            $table->string('t');
-            $table->string('u');
-            $table->string('v');
+
+            $table->string('a')->nullable();
+            $table->string('b')->nullable();
+            $table->string('c')->nullable();
+            $table->string('d')->nullable();
+            $table->string('e')->nullable();
+            $table->string('f')->nullable();
+            $table->string('g')->nullable();
+            $table->string('h')->nullable();
+            $table->string('i')->nullable();
+            $table->string('j')->nullable();
+            $table->string('k')->nullable();
+            $table->string('l')->nullable();
+            $table->string('m')->nullable();
+            $table->string('n')->nullable();
+            $table->string('o')->nullable();
+            $table->string('p')->nullable();
+            $table->string('q')->nullable();
+            $table->string('r')->nullable();
+            $table->string('s')->nullable();
+            $table->string('t')->nullable();
+            $table->string('u')->nullable();
+            $table->string('v')->nullable();
         //$table->string('w');
-            $table->string('x');
-            $table->string('y');
-            $table->string('z');
+            $table->string('x')->nullable();;
+            $table->string('y')->nullable();;
+            $table->string('z')->nullable();;
             //$table->timestamps();
-            */
+
         });
     }
 

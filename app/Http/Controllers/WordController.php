@@ -53,8 +53,45 @@ class WordController extends Controller
     public function store(Request $request)
     {
 
-        $word = new Word;
+        //$word = Word::create($request->all());
+        /*
+        $a = $request->input('a');
+        $b = $request->input('b');
+        $c = $request->input('c');
+        $d = $request->input('d');
+        $e = $request->input('e');
+        $f = $request->input('f');
+        $g = $request->input('g');
+        $h = $request->input('h');
+        $i = $request->input('i');
+        $j = $request->input('j');
+        $k = $request->input('k');
+        $l = $request->input('l');
+        $m = $request->input('m');
+        $n = $request->input('n');
+        $o = $request->input('o');
+        $p = $request->input('p');
+        $q = $request->input('q');
+        $r = $request->input('r');
+        $s = $request->input('s');
+        $t = $request->input('t');
+        $u = $request->input('u');
+        $v = $request->input('v');
+        $x = $request->input('x');
+        $y = $request->input('y');
+        $z = $request->input('z');
+        */
 
+        //$word = new Word;
+        $word = $request->word;
+        // ord Returns the ASCII value of the first character of a string
+        $firstletter = ord($word);
+        dd($firstletter);
+        //dd($word);
+        /*
+        $input = $request->input();
+        dd($input);
+        */
         $word->save();
 
         // redirect
