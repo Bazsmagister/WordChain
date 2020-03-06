@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use App\Word;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+//use Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Response;
 use Symfony\Component\Console\Input\Input;
 
 class WordController extends Controller
@@ -54,6 +55,55 @@ class WordController extends Controller
      */
     public function store(Request $request)
     {
+        /*
+        $validator = Validator::make($request, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v', 'x', 'y', 'z' => 'required|min:1|max:32|regex:/^[a-z ,.\'-]+$/i |alpha_dash']);
+
+            // process the login
+            if ($validator->fails()) {
+                return Redirect::to('game')
+                    ->withErrors($validator);
+            } else {
+                // store
+
+*/
+
+
+
+                /*
+                $string = "'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v','w', 'x', 'y', 'z'";
+                echo(str_replace(",", "=>", $string));
+                */
+
+                Validator::make($request->all(), [
+                    //'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', //'u','v','w', 'x', 'y', 'z' => 'min:1|max:32|alpha_dash',
+
+                    'a'=> 'min:2|max:32|alpha_dash',
+                    'b'=> 'min:2|max:32|alpha_dash',
+                    'c'=> 'min:2|max:32|alpha_dash',
+                    'd'=> 'min:2|max:32|alpha_dash',
+                    'e'=> 'min:2|max:32|alpha_dash',
+                    'f'=> 'min:2|max:32|alpha_dash',
+                    'g'=> 'min:2|max:32|alpha_dash',
+                    'h'=> 'min:2|max:32|alpha_dash',
+                    'i'=> 'min:2|max:32|alpha_dash',
+                    'j'=> 'min:2|max:32|alpha_dash',
+                    'k'=> 'min:2|max:32|alpha_dash',
+                    'l'=> 'min:2|max:32|alpha_dash',
+                    'm'=> 'min:2|max:32|alpha_dash',
+                    'n'=>'min:2|max:32|alpha_dash',
+                     'o'=>'min:2|max:32|alpha_dash',
+                     'p'=>'min:2|max:32|alpha_dash',
+                     'q'=>'min:2|max:32|alpha_dash',
+                    'r'=>'min:2|max:32|alpha_dash',
+                    's'=>'min:2|max:32|alpha_dash',
+                    't'=> 'min:2|max:32|alpha_dash',
+                    'u'=> 'min:2|max:32|alpha_dash',
+                    'v'=> 'min:2|max:32|alpha_dash',
+                    'w'=> 'min:2|max:32|alpha_dash',
+                    'x'=> 'min:2|max:32|alpha_dash',
+                    'y'=> 'min:2|max:32|alpha_dash',
+                    'z'=>  'min:2|max:32|alpha_dash',
+                ])->validate();
 
         //$word = Word::create($request->all());
         /*
@@ -355,7 +405,7 @@ class WordController extends Controller
 
                                                                                                          break;
             default:
-                # code...
+                echo('choose an alphabetical character pls!');
                 break;
         }
 
@@ -367,13 +417,15 @@ class WordController extends Controller
         //$word->save();
 
         // redirect
-        $request->flash();
-        Session::flash('message', 'Successfully created word!');
+
+        //$request->flash('message', 'Successfully created word!');
+        //Session::flash('message', 'Successfully created word!');
+        //->withInput() adds the Request::flash() / $request->flash() automatically
         return Redirect::to('game')->withInput();;
 
         //return view('game', compact('rword'));
         /*
-            $validator = Validator::make($request, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'x', 'y', 'z' => 'required|min:2|max:32|regex:/^[a-z ,.\'-]+$/i |alpha_dash']);
+            $validator = Validator::make($request, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'x', 'y', 'z' => 'required|min:1|max:32|regex:/^[a-z ,.\'-]+$/i |alpha_dash']);
 
             // process the login
             if ($validator->fails()) {
@@ -414,8 +466,8 @@ class WordController extends Controller
             return response()->json($word);
         }
         */
-    }
 
+    }
     /**
      * Display the specified resource.
      *

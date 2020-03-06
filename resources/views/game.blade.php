@@ -34,7 +34,7 @@
                         <?php
                     //With Laravel:
                     ?>
-                        <div value="{{old('word')}}">Your word was:</div>
+                        <div>Your word was:</div>
                             {{old('word')}}
 
 
