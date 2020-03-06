@@ -24,7 +24,8 @@
                 <?php
                 //With Laravel:
                 ?>
-                Your word was: {{$userword}}
+                <div>Your word was:</div>Your word was:
+                {{$word->last()}}
 
 
                 <br>

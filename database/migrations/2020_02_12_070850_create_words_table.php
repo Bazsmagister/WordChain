@@ -41,7 +41,7 @@ class CreateWordsTable extends Migration
             $table->string('t')->nullable();
             $table->string('u')->nullable();
             $table->string('v')->nullable();
-        //$table->string('w');
+            $table->string('w')->nullable();
             $table->string('x')->nullable();;
             $table->string('y')->nullable();;
             $table->string('z')->nullable();;

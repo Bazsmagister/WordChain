@@ -8,8 +8,8 @@
             <div id="banner" class="container">
                 Pick a word!
 
-                <div>
-                    <form action="/words"  method="POST">
+               <div>
+                    <form action="/words" method="POST">
                         @csrf
                         Your word:
                         <input type="text" name="word">
@@ -22,9 +22,9 @@
 
 
                         <!-- if there are creation errors, they will show here -->
-                       @if ($errors->all())
-                            {{$errors}}
-                       @endif
+                        @if ($errors->all())
+                        {{$errors}}
+                        @endif
 
 
 
@@ -32,9 +32,18 @@
 
 
                         <?php
-                //With Laravel:
-                ?>
-                        Your word was:
+                    //With Laravel:
+                    ?>
+                        <div value="{{old('word')}}">Your word was:</div>
+                            {{old('word')}}
+
+
+                        <div class="container">
+
+                        </div>
+
+
+
 
 
                         <br>
@@ -52,6 +61,7 @@
 </div>
 
 <div>
+
 
 
 
