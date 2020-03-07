@@ -105,7 +105,8 @@ class WordController extends Controller
                     'y'=> 'min:2|max:32|alpha',
                     'z'=>  'min:2|max:32|alpha',
                     */
-                    'word'=>  'min:2|max:32|alpha',
+                    'word'=>  'required|min:2|max:32|alpha',
+                    //"'word->a'"=>  'min:2|max:32|alpha',
                 ])->validate();
 
         //$word = Word::create($request->all());
