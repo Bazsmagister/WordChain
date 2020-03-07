@@ -65732,15 +65732,15 @@ function Example() {
     className: "card"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-header"
-  }, "Example Component bbbbbb"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "React Example Component", " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body"
-  }, "I'm an example yxcyxyxc cxvxcvxcvcomponent!")))));
+  }, "I'm an example component!")))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Example);
 
-if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null), document.getElementById('example'));
+if (document.getElementById("example")) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null), document.getElementById("example"));
 }
 
 /***/ }),
