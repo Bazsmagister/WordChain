@@ -1,6 +1,5 @@
 @include ('includes.header')
 
-
 <div id="header-wrapper">
 
     <div id="header-featured">
@@ -8,7 +7,7 @@
             <div id="banner" class="container">
                 Pick a word!
 
-               <div>
+                <div>
                     <form action="/words" method="POST">
                         @csrf
                         Your word:
@@ -16,42 +15,25 @@
                         <br>
                         <button type="submit">Submit</button>
 
-
                     </form>
                     <div>
 
-
-                        <!-- if there are creation errors, they will show here -->
-                        @if ($errors->all())
-                        {{$errors}}
-                        @endif
-
-
-
-
+                        @include('includes.errors')
 
 
                         <?php
                     //With Laravel:
                     ?>
-                        <div>Your word was:</div>
-                            {{old('word')}}
+                        <div class="">Your word was: </div>
+                        {{old('word')}}
 
 
-                        <div class="container">
-
+                        <div class="">
+                            @php
+                            //sleep(1);
+                            @endphp
+                            My word is: {{--   --}}
                         </div>
-
-
-
-
-
-                        <br>
-                        My word is: {{--   --}}
-                        <br>
-
-
-
 
                     </div>
                 </div>
@@ -61,9 +43,6 @@
 </div>
 
 <div>
-
-
-
 
 </div>
 
