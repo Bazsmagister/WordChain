@@ -1,11 +1,1 @@
 @extends ('layout')
-
-
-
-
-
-
-
-
-
-
