@@ -1,5 +1,6 @@
 @extends ('layouts.master')
 
+@section ('game')
 
 <div id="header-wrapper">
 
@@ -43,6 +44,4 @@
     </div>
 </div>
 
-<div>
-    h
-</div>
+@endsection

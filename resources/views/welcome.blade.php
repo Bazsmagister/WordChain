@@ -2,7 +2,7 @@
 
 
 
-
+@section ('welcome')
 <div id="header-wrapper">
 
     <div id="header-featured">
@@ -17,3 +17,4 @@
         </div>
     </div>
 </div>
+@endsection

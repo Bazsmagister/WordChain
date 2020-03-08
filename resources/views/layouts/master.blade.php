@@ -39,6 +39,8 @@
     </div>
 
     @yield ('about_me')
+    @yield ('game')
+    @yield ('welcome')
 
 
 
