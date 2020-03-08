@@ -1,3 +1,4 @@
+@extends ('layouts.master')
 @include ('includes.header')
 
 <div id="header-wrapper">

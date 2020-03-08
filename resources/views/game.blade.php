@@ -1,3 +1,4 @@
+@extends ('layouts.master')
 @include ('includes.header')
 
 <div id="header-wrapper">
@@ -28,7 +29,7 @@
                         {{old('word')}}
 
 
-                        <div class="">
+                        <div class="word">
                             @php
                             //sleep(1);
                             @endphp
@@ -43,7 +44,7 @@
 </div>
 
 <div>
-
+    h
 </div>
 
 @include ('includes.footer')

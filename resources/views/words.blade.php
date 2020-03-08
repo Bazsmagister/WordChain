@@ -1,5 +1,7 @@
+@extends ('layouts.master')
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,61 +9,17 @@
     <title>Document</title>
 </head>
 @include('includes.header')
+
 <body>
+
     <body>
 
 
         @foreach ($words as $word)
 
-            <div class="container">
-                <ul>
-                    <li>{{$word -> a }}  </li>
-                </ul>
-            </div>
-
-
-        @endforeach
-
-
-        @foreach ($words as $word)
-
-            <div class="container">
-                <ul>
-                    <li>{{$word -> b }}  </li>
-                </ul>
-            </div>
-
-
-        @endforeach
-
-        @foreach ($words as $word)
-
         <div class="container">
             <ul>
-                <li>{{$word -> c }}  </li>
-            </ul>
-        </div>
-
-        @endforeach
-
-        @foreach ($words as $word)
-
-        <div class="container">
-            <ul>
-                <li>{{$word -> d }}  </li>
-            </ul>
-        </div>
-
-
-        @endforeach
-
-
-
-        @foreach ($words as $word)
-
-        <div class="container">
-            <ul>
-                <li>{{$word -> e }}  </li>
+                <li>{{$word -> a }} </li>
             </ul>
         </div>
 
@@ -73,7 +31,7 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> f }}  </li>
+                <li>{{$word -> b }} </li>
             </ul>
         </div>
 
@@ -84,7 +42,17 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> g }}  </li>
+                <li>{{$word -> c }} </li>
+            </ul>
+        </div>
+
+        @endforeach
+
+        @foreach ($words as $word)
+
+        <div class="container">
+            <ul>
+                <li>{{$word -> d }} </li>
             </ul>
         </div>
 
@@ -97,7 +65,7 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> h }}  </li>
+                <li>{{$word -> e }} </li>
             </ul>
         </div>
 
@@ -109,32 +77,18 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> i }}  </li>
+                <li>{{$word -> f }} </li>
             </ul>
         </div>
 
 
         @endforeach
 
-
         @foreach ($words as $word)
 
         <div class="container">
             <ul>
-                <li>{{$word -> j }}  </li>
-            </ul>
-        </div>
-
-
-        @endforeach
-
-
-
-        @foreach ($words as $word)
-
-        <div class="container">
-            <ul>
-                <li>{{$word -> k }}  </li>
+                <li>{{$word -> g }} </li>
             </ul>
         </div>
 
@@ -147,7 +101,31 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> l }}  </li>
+                <li>{{$word -> h }} </li>
+            </ul>
+        </div>
+
+
+        @endforeach
+
+
+        @foreach ($words as $word)
+
+        <div class="container">
+            <ul>
+                <li>{{$word -> i }} </li>
+            </ul>
+        </div>
+
+
+        @endforeach
+
+
+        @foreach ($words as $word)
+
+        <div class="container">
+            <ul>
+                <li>{{$word -> j }} </li>
             </ul>
         </div>
 
@@ -160,7 +138,7 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> m }}  </li>
+                <li>{{$word -> k }} </li>
             </ul>
         </div>
 
@@ -173,7 +151,7 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> n }}  </li>
+                <li>{{$word -> l }} </li>
             </ul>
         </div>
 
@@ -186,19 +164,7 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> o }}  </li>
-            </ul>
-        </div>
-
-
-        @endforeach
-
-
-        @foreach ($words as $word)
-
-        <div class="container">
-            <ul>
-                <li>{{$word -> p }}  </li>
+                <li>{{$word -> m }} </li>
             </ul>
         </div>
 
@@ -211,42 +177,7 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> q }}  </li>
-            </ul>
-        </div>
-
-
-        @endforeach
-
-
-        @foreach ($words as $word)
-
-        <div class="container">
-            <ul>
-                <li>{{$word -> r }}  </li>
-            </ul>
-        </div>
-
-
-        @endforeach
-
-
-        @foreach ($words as $word)
-
-        <div class="container">
-            <ul>
-                <li>{{$word -> s }}  </li>
-            </ul>
-        </div>
-
-
-        @endforeach
-
-        @foreach ($words as $word)
-
-        <div class="container">
-            <ul>
-                <li>{{$word -> t }}  </li>
+                <li>{{$word -> n }} </li>
             </ul>
         </div>
 
@@ -259,7 +190,7 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> u }}  </li>
+                <li>{{$word -> o }} </li>
             </ul>
         </div>
 
@@ -271,7 +202,20 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> v }}  </li>
+                <li>{{$word -> p }} </li>
+            </ul>
+        </div>
+
+
+        @endforeach
+
+
+
+        @foreach ($words as $word)
+
+        <div class="container">
+            <ul>
+                <li>{{$word -> q }} </li>
             </ul>
         </div>
 
@@ -283,7 +227,7 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> x }}  </li>
+                <li>{{$word -> r }} </li>
             </ul>
         </div>
 
@@ -295,7 +239,31 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> y }}  </li>
+                <li>{{$word -> s }} </li>
+            </ul>
+        </div>
+
+
+        @endforeach
+
+        @foreach ($words as $word)
+
+        <div class="container">
+            <ul>
+                <li>{{$word -> t }} </li>
+            </ul>
+        </div>
+
+
+        @endforeach
+
+
+
+        @foreach ($words as $word)
+
+        <div class="container">
+            <ul>
+                <li>{{$word -> u }} </li>
             </ul>
         </div>
 
@@ -307,7 +275,43 @@
 
         <div class="container">
             <ul>
-                <li>{{$word -> z }}  </li>
+                <li>{{$word -> v }} </li>
+            </ul>
+        </div>
+
+
+        @endforeach
+
+
+        @foreach ($words as $word)
+
+        <div class="container">
+            <ul>
+                <li>{{$word -> x }} </li>
+            </ul>
+        </div>
+
+
+        @endforeach
+
+
+        @foreach ($words as $word)
+
+        <div class="container">
+            <ul>
+                <li>{{$word -> y }} </li>
+            </ul>
+        </div>
+
+
+        @endforeach
+
+
+        @foreach ($words as $word)
+
+        <div class="container">
+            <ul>
+                <li>{{$word -> z }} </li>
             </ul>
         </div>
 
@@ -318,4 +322,5 @@
         @include('includes.footer')
     </body>
 </body>
+
 </html>
