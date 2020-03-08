@@ -1,7 +1,5 @@
 @extends ('layouts.master')
 
-
-
 @section ('welcome')
 <div id="header-wrapper">
 
