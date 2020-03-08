@@ -45,3 +45,5 @@ Route::get('/words', function () {
 
 Route::resource('words', 'WordController');
 
+Route::get('ajaxRequest', 'WordController@ajaxRequest');
+

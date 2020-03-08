@@ -14,13 +14,7 @@ use Symfony\Component\Console\Input\Input;
 
 class WordController extends Controller
 {
-    /*
-    public $rules =
-        [
-            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'x', 'y', 'z' => 'required|min:2|max:32|regex:/^[a-z ,.\'-]+$/i |alpha_dash' ,
-
-        ];
-    */
+    
     /**
      * Display a listing of the resource.
      *
@@ -32,9 +26,10 @@ class WordController extends Controller
     //$words = DB::Word->get();
 
     //with paginate
-    $words = Word::simplePaginate(5);
+    //$words = Word::simplePaginate(5);
     $words = Word::get();
-    return view('words', compact('words'));
+    //return view('words', compact('words'));
+    return response()->json($word);
     }
 
     /**
@@ -55,88 +50,16 @@ class WordController extends Controller
      */
     public function store(Request $request)
     {
-        /*
-        $validator = Validator::make($request, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v', 'x', 'y', 'z' => 'required|min:1|max:32|regex:/^[a-z ,.\'-]+$/i |alpha_dash']);
+      
 
-            // process the login
-            if ($validator->fails()) {
-                return Redirect::to('game')
-                    ->withErrors($validator);
-            } else {
-                // store
-
-*/
-
-
-
-                /*
-                $string = "'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v','w', 'x', 'y', 'z'";
-                echo(str_replace(",", "=>", $string));
-                */
 
                 Validator::make($request->all(), [
-                    //'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', //'u','v','w', 'x', 'y', 'z' => 'min:1|max:32|alpha_dash',
-
-                    /*
-                    'a'=> 'min:2|max:32|alpha',
-                    'b'=> 'min:2|max:32|alpha',
-                    'c'=> 'min:2|max:32|alpha',
-                    'd'=> 'min:2|max:32|alpha',
-                    'e'=> 'min:2|max:32|alpha',
-                    'f'=> 'min:2|max:32|alpha',
-                    'g'=> 'min:2|max:32|alpha',
-                    'h'=> 'min:2|max:32|alpha',
-                    'i'=> 'min:2|max:32|alpha',
-                    'j'=> 'min:2|max:32|alpha',
-                    'k'=> 'min:2|max:32|alpha',
-                    'l'=> 'min:2|max:32|alpha',
-                    'm'=> 'min:2|max:32|alpha',
-                    'n'=>'min:2|max:32|alpha',
-                     'o'=>'min:2|max:32|alpha',
-                     'p'=>'min:2|max:32|alpha',
-                     'q'=>'min:2|max:32|alpha',
-                    'r'=>'min:2|max:32|alpha',
-                    's'=>'min:2|max:32|alpha',
-                    't'=> 'min:2|max:32|alpha',
-                    'u'=> 'min:2|max:32|alpha',
-                    'v'=> 'min:2|max:32|alpha',
-                    'w'=> 'min:2|max:32|alpha',
-                    'x'=> 'min:2|max:32|alpha',
-                    'y'=> 'min:2|max:32|alpha',
-                    'z'=>  'min:2|max:32|alpha',
-                    */
+                   
                     'word'=>  'required|min:2|max:32|alpha',
-                    //"'word->a'"=>  'min:2|max:32|alpha',
+                   
                 ])->validate();
 
-        //$word = Word::create($request->all());
-        /*
-        $a = $request->input('a');
-        $b = $request->input('b');
-        $c = $request->input('c');
-        $d = $request->input('d');
-        $e = $request->input('e');
-        $f = $request->input('f');
-        $g = $request->input('g');
-        $h = $request->input('h');
-        $i = $request->input('i');
-        $j = $request->input('j');
-        $k = $request->input('k');
-        $l = $request->input('l');
-        $m = $request->input('m');
-        $n = $request->input('n');
-        $o = $request->input('o');
-        $p = $request->input('p');
-        $q = $request->input('q');
-        $r = $request->input('r');
-        $s = $request->input('s');
-        $t = $request->input('t');
-        $u = $request->input('u');
-        $v = $request->input('v');
-        $x = $request->input('x');
-        $y = $request->input('y');
-        $z = $request->input('z');
-        */
+      
 
         //$input = $request->all();
         //dd($input);
@@ -516,4 +439,16 @@ class WordController extends Controller
     {
         //
     }
+
+        public function ajaxRequest()
+
+    {
+
+        $lastword = DB::table('words')->get()->last();
+
+        return response()->json($lastword);
+
+    }
+
+   
 }

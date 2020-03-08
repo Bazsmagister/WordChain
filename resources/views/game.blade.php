@@ -29,23 +29,53 @@
                         <div class="">Your word was: </div>
                         {{old('word')}}
 
+                        <hr>
 
                         <div class="word">
                             @php
                             //sleep(1);
                             @endphp
-                            My word is: {{--   --}}
+                            My word is: {{----}}
+                            <hr>
                             <script>
-                                $(document).ready(function(){
-                            $("button").click(function(){
-                            $.get("/words", function(data, status){
-                            alert("Data: " + data + "\nStatus: " + status);
+                                $.ajaxSetup({
+
+                            headers: {
+
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+
+                            }
+
                             });
+
+
+                            $(".submit").click(function(e){
+
+
+                            e.preventDefault();
+
+
+                            $.ajax({
+
+                            type:'GET',
+
+                            url:'/ajaxRequest',
+
+                            data:{} ,
+
+                            success:function(data){
+
+                            alert(data.success);
+
+                            }
+
                             });
+
+
                             });
                             </script>
 
-                            <button>Send an HTTP GET request to a page and get the result back</button>
+                            <button class="submit">Send an HTTP GET request to a page and get the result back</button>
 
                         </div>
 
