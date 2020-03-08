@@ -25,24 +25,20 @@
 
 <body>
 
-    @include ('includes.header')
+    <div id="header" class="container">
 
+        <div id="menu">
+            <ul>
+                <li class="current_page_item"><a href="/" accesskey="1" title="">Welcome</a></li>
+                <li><a href="game" accesskey="2" title="">Game</a></li>
+                <li><a href="about_me" accesskey="3" title="">About Me</a></li>
+                <li><a href="words" accesskey="3" title="">Words</a></li>
 
-    <div id="header-wrapper">
-
-        <div id="header-featured">
-            <div id="banner-wrapper">
-                <div id="banner" class="container">
-                    <h2>Wordchain game</h2>
-                    <h3>Pick a word, and I will find an other with your word's last letter.
-                        Enjoy!</h3>
-
-                    <a href="/game" class="button">Let's start</a>
-                </div>
-            </div>
+            </ul>
         </div>
     </div>
 
+    @yield ('about_me')
 
 
 
@@ -52,6 +48,9 @@
 
 
     @include ('includes.footer')
+
+
+
 
     <script src="js/app.js"></script>
 

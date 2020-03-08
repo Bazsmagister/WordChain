@@ -1,5 +1,5 @@
 @extends ('layouts.master')
-@include ('includes.header')
+
 
 <div id="header-wrapper">
 
@@ -46,5 +46,3 @@
 <div>
     h
 </div>
-
-@include ('includes.footer')

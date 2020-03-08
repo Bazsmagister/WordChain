@@ -1,6 +1,7 @@
 @extends ('layouts.master')
-@include ('includes.header')
 
+
+@section ('about_me')
 <div id="header-wrapper">
 
     <div id="header-featured">
@@ -12,8 +13,4 @@
         </div>
     </div>
 </div>
-
-
-
-
-@include ('includes.footer')
+@endsection
