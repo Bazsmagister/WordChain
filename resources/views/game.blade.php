@@ -35,6 +35,18 @@
                             //sleep(1);
                             @endphp
                             My word is: {{--   --}}
+                            <script>
+                                $(document).ready(function(){
+                            $("button").click(function(){
+                            $.get("/words", function(data, status){
+                            alert("Data: " + data + "\nStatus: " + status);
+                            });
+                            });
+                            });
+                            </script>
+
+                            <button>Send an HTTP GET request to a page and get the result back</button>
+
                         </div>
 
                     </div>

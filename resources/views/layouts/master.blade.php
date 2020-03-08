@@ -53,7 +53,7 @@
     @include ('includes.footer')
 
 
-    <script src="js/app.js"></script>
+
 
 </body>
 
