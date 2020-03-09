@@ -33,7 +33,7 @@ $factory->define(Word::class, function (Faker $faker) {
         't' => 't' . $faker->word(),
         'u' => 'u' . $faker->word(),
         'v' => 'v' . $faker->word(),
-        'w' => 'w' . $faker->word(), //w doesn't work
+        'w' => 'welt',  //w doesn't work
         'x' => 'x' . $faker->word(),
         'y' => 'y' . $faker->word(),
         'z' => 'z' . $faker->word()

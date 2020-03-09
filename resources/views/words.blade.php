@@ -270,6 +270,17 @@
 
 @endforeach
 
+@foreach ($words as $word)
+
+<div class="container">
+    <ul>
+        <li>{{$word -> w }} </li>
+    </ul>
+</div>
+
+
+@endforeach
+
 
 @foreach ($words as $word)
 

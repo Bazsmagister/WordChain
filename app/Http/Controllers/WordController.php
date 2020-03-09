@@ -28,8 +28,8 @@ class WordController extends Controller
     //with paginate
     //$words = Word::simplePaginate(5);
     $words = Word::get();
-    //return view('words', compact('words'));
-    return response()->json($word);
+    return view('words', compact('words'));
+    //return response()->json($words);
     }
 
     /**
@@ -403,7 +403,8 @@ class WordController extends Controller
      */
     public function show(Word $word)
     {
-        //
+        return response()->json($word);
+        //return view('words', compact('word'));
     }
 
     /**
