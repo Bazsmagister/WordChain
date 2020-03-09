@@ -47,11 +47,20 @@
                             <br>
                             My word is: {{----}}
                             @php
-                            echo ($last);
-                            var_dump(DB::table('words')->get()->last->$last));
-                            var_dump(DB::table('words')->get()->last());
+                            echo ($last).'mama';
+                            //$w = DB::table('words')->whereNotNull('"$last"')->get();
+                            //var_dump((DB::table('words')->where('id', '1')->get());
+                            $w = DB::table('words')->where('id', 1)->get();
+                            //$w = DB::table('words')->find(1);
+                            //dd($w);
+
+                            //var_dump(DB::table('words')->get()->last());
                             //DB::table('words')->where('$last', NOT NULL)->get()->last();
                             //DB::table('words')->where('$last', NOT NULL)->get()->last();
+                            echo($w=>$last);
+                            dd($w=>`$last`);
+                            var_dump($w=>'$last');
+                            //var_dump($w->($last));
                             @endphp
                             <hr>
                             <script>
