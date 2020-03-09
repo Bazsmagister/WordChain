@@ -447,7 +447,8 @@ class WordController extends Controller
 
         $lastword = DB::table('words')->get()->last();
 
-        return response()->json($lastword);
+        //return response()->json($lastword);
+        return view('game', compact('lastword'));
 
     }
 

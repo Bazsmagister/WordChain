@@ -29,13 +29,30 @@
                         <div class="">Your word was: </div>
                         {{old('word')}}
 
+
                         <hr>
+                        <div>Lastword:
+
+                        </div>
 
                         <div class="word">
+                            Last character is:
+                            <br>
+
                             @php
                             //sleep(1);
+                            $last = substr((old('word')), -1);
+                            echo (substr((old('word')), -1));
                             @endphp
+                            <br>
                             My word is: {{----}}
+                            @php
+                            echo ($last);
+                            var_dump(DB::table('words')->get()->last->$last));
+                            var_dump(DB::table('words')->get()->last());
+                            //DB::table('words')->where('$last', NOT NULL)->get()->last();
+                            //DB::table('words')->where('$last', NOT NULL)->get()->last();
+                            @endphp
                             <hr>
                             <script>
                                 $.ajaxSetup({
