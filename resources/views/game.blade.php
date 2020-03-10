@@ -51,11 +51,42 @@
                             //$l = eval($last);
                             //dd($l);
 
+                            // $lastword = DB::table('words')->get()->last();
+                            // dd($lastword->$last);
                             //$w = DB::table('words')->whereNotNull('"$last"')->get();
                             //var_dump((DB::table('words')->where('id', '1')->get());
-                            $w = DB::table('words')->where('id', 1)->get();
+
+                            //$w = DB::table('words')->where('id', 1)->get();//jó
+                            $w = DB::table('words')->where('id', 1)->get()->last();//jó
+                            //$result = (array) json_encode($w, true);
+                            var_dump($w->a);
+                            //$array = (array)$w;
+                            //print_r($array);
+
+
+                            /*
+                            $array = json_decode(json_encode($array), true);
+                            foreach($array as $key=>$value)
+                            {
+                            var_dump($value->id);
+                            var_dump($array[$key]->id);
+                            }
+                            */
+                            //$value = $result[$last];
+                            //echo ($value);
+
                             //$w = DB::table('words')->find(1);
                             //dd($w); // it works. it gives back a collection
+                            //dd($w);
+                            //$flattened = $w->flatten();
+                            //echo ($flattened->`$last`);
+
+
+
+                            //$p = "$last";
+                            //echo $w->$p;
+                            //dd($w["0"] -> a); //it works
+
                             //var_dump($w);//it works. it gives back an obj collection
                             //var_dump($w["0"]);//it works
                             //var_dump($w["0"]["a"]);//Cannot use object of type stdClass as array
@@ -70,7 +101,8 @@
                             //var_dump($w["0"] -> {{$last}}); //syntax error, unexpected '{'
                             //var_dump($w["0"] -> eval($last)); //Call to undefined method stdClass::eval()
                             //var_dump($w["0"]-> '(`$last`)'); syntax error, unexpected ''(`$last`)''
-                            var_dump($w["0"]-> '(`$last`)'); //syntax error, unexpected ''(`$last`)''
+                            //var_dump($object["0"]-> a);$object is undefined
+                            //var_dump($w["0"]-> '(`$last`)'); //syntax error, unexpected ''(`$last`)''
                             //var_dump($w["0"]-> '($last)'; //syntax error, unexpected ''($last)''
                             //var_dump($w["0"]-> ($last); //syntax error, unexpected '(', expecting identifier
                             //var_dump($w["0"]-> '`$last`'); /syntax error, unexpected ''`$last`''
