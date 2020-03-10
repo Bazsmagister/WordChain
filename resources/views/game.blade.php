@@ -48,18 +48,57 @@
                             My word is: {{----}}
                             @php
                             echo ($last).'mama';
+                            //$l = eval($last);
+                            //dd($l);
+
                             //$w = DB::table('words')->whereNotNull('"$last"')->get();
                             //var_dump((DB::table('words')->where('id', '1')->get());
                             $w = DB::table('words')->where('id', 1)->get();
                             //$w = DB::table('words')->find(1);
-                            //dd($w);
+                            //dd($w); // it works. it gives back a collection
+                            //var_dump($w);//it works. it gives back an obj collection
+                            //var_dump($w["0"]);//it works
+                            //var_dump($w["0"]["a"]);//Cannot use object of type stdClass as array
+                            //var_dump($w["0"]=> a); //syntax error, unexpected '=>'
+                            //var_dump($w["0"]=> "a"); //syntax error, unexpected '=>'
+                            // var_dump($w["0"] -> 'a'); //syntax error, unexpected ''a''
+                            //var_dump($w["0"] -> a); //it works
+                            //var_dump($w["0"] -> `$last`); //syntax error, unexpected '`', expecting identifier
+                            //var_dump($w["0"] -> `'$last'`); //syntax error, unexpected '`', expecting identifier
+                            //var_dump($w["0"] -> {$last}); //Undefined property: stdClass::$
+                            //var_dump($w["0"] -> {`$last`}); //Undefined property: stdClass::$
+                            //var_dump($w["0"] -> {{$last}}); //syntax error, unexpected '{'
+                            //var_dump($w["0"] -> eval($last)); //Call to undefined method stdClass::eval()
+                            //var_dump($w["0"]-> '(`$last`)'); syntax error, unexpected ''(`$last`)''
+                            var_dump($w["0"]-> '(`$last`)'); //syntax error, unexpected ''(`$last`)''
+                            //var_dump($w["0"]-> '($last)'; //syntax error, unexpected ''($last)''
+                            //var_dump($w["0"]-> ($last); //syntax error, unexpected '(', expecting identifier
+                            //var_dump($w["0"]-> '`$last`'); /syntax error, unexpected ''`$last`''
+                            //var_dump($w["0"]-> '$last'); //syntax error, unexpected ''$last''
+                            //var_dump($w["0"].$last); //Object of class stdClass could not be converted to string
+                            //dd($w->a); //Property [a] does not exist on this collection instance.
+                            //dd($w->'a'); //syntax error, unexpected ''a'' (T_CONSTANT_ENCAPSED_STRING),
+                            //dd($w[].a); //Cannot use [] for reading
+                            //dd($w[]=>a); //syntax error, unexpected '=>
 
                             //var_dump(DB::table('words')->get()->last());
                             //DB::table('words')->where('$last', NOT NULL)->get()->last();
                             //DB::table('words')->where('$last', NOT NULL)->get()->last();
-                            echo($w=>$last);
-                            dd($w=>`$last`);
-                            var_dump($w=>'$last');
+                            //echo($w->{'$last'}); //Property [$last] does not exist on this collection instance.
+                            //echo($w->'$last'); //syntax error, unexpected ''$last'' (T_CONSTANT_ENCAPSED_STRING),
+                            //echo($w->{$last});//Property [] does not exist on this collection instance.
+                            //echo($w->$last); //Property [] does not exist on this collection instance.
+                            //echo($w->{{$last}});//syntax error, unexpected '{'
+                            //echo($w->{{`$last`}});//syntax error, unexpected '{'
+                            //echo($w->{`$last`});//Property [] does not exist on this collection instance.
+                            //echo($w->`$last`); //syntax error, unexpected '`', expecting identifier (T_STRING) or
+                            //echo($w->'`$last`');//syntax error, unexpected ''`$last`'' (T_CONSTANT_ENCAPSED_STRING),
+                            //echo($w=>[0]); //syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+                            //echo($w=>['0']); //syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+
+
+                            //dd($w=>`$last`);
+                            //var_dump($w=>a);
                             //var_dump($w->($last));
                             @endphp
                             <hr>
