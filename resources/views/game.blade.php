@@ -47,7 +47,7 @@
                             <br>
                             My word is: {{----}}
                             @php
-                            echo ($last).'mama';
+                            //echo ($last).'mama';
                             //$l = eval($last);
                             //dd($l);
 
@@ -58,8 +58,65 @@
 
                             //$w = DB::table('words')->where('id', 1)->get();//jó
                             $w = DB::table('words')->where('id', 1)->get()->last();//jó
+                            //$n = DB::table('words')->whereFirst('id', 1); //ez fura :)
+                            //var_dump($n);
                             //$result = (array) json_encode($w, true);
-                            var_dump($w->a);
+                            //var_dump($w->c);
+                            switch ($last) {
+                            case 'a': echo ($w->a);
+                            break;
+                            case 'b': echo($w->b);
+                            break;
+                            case 'c': echo($w->c);
+                            break;
+                            case 'd': echo($w->d);
+                            break;
+                            case 'e': echo($w->e);
+                            break;
+                            case 'f': echo($w->f);
+                            break;
+                            case 'g': echo($w->g);
+                            break;
+                            case 'h': echo($w->h);
+                            break;
+                            case 'i': echo($w->i);
+                            break;
+                            case 'j': echo($w->j);
+                            break;
+                            case 'k': echo($w->k);
+                            break;
+                            case 'l': echo($w->l);
+                            break;
+                            case 'm': echo($w->m);
+                            break;
+                            case 'n': echo($w->n);
+                            break;
+                            case 'o': echo($w->o);
+                            break;
+                            case 'p': echo($w->p);
+                            break;
+                            case 'q': echo($w->q);
+                            break;
+                            case 'r': echo($w->r);
+                            break;
+                            case 's': echo($w->s);
+                            break;
+                            case 't': echo($w->t);
+                            break;
+                            case 'u': echo($w->u);
+                            break;
+                            case 'v': echo($w->v);
+                            break;
+                            case 'w': echo($w->w);
+                            break;
+                            case 'x': echo($w->x);
+                            break;
+                            case 'y': echo($w->y);
+                            break;
+                            case 'z': echo($w->z);
+                            break;
+                            default:
+                            }
                             //$array = (array)$w;
                             //print_r($array);
 
@@ -172,7 +229,7 @@
                             });
                             </script>
 
-                            <button class="submit">Send an HTTP GET request to a page and get the result back</button>
+
 
                         </div>
 
