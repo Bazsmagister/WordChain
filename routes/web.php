@@ -32,7 +32,6 @@ Route::post('/game', function () {
 
 Route::get('/about_me', function () {
     return view('about_me');
-
 });
 
 /*
@@ -47,3 +46,10 @@ Route::resource('words', 'WordController');
 
 Route::get('ajaxRequest', 'WordController@ajaxRequest');
 
+Route::post('postAjaxRequest', 'WordController@postAjaxRequest');
+
+
+
+Route::get('ajaxRequestBlade', function () {
+    return view('ajaxRequestBlade');
+});

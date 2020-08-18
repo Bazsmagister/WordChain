@@ -23,7 +23,6 @@
 
 </head>
 
-
 <body>
 
     <div id="header" class="container">
@@ -35,6 +34,12 @@
                 <li><a href="about_me" accesskey="3" title="">About Me</a></li>
                 <li><a href="words" accesskey="3" title="">Words</a></li>
 
+                <li><a href="ajaxRequest" accesskey="4" title="">ajaxRequest to get the last word in json </a></li>
+
+                <li><a href="ajaxRequestBlade" accesskey="4" title="">ajaxRequestBlade</a></li>
+
+
+
             </ul>
         </div>
     </div>
@@ -44,19 +49,12 @@
     @yield ('welcome')
     @yield ('words')
 
-
-
     <div id="example">
 
     </div>
 
-
     @include ('includes.footer')
 
-
-
-
 </body>
-
 
 </html>

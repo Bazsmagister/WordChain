@@ -14,6 +14,7 @@ class WordSeeder extends Seeder
         //$this->call(WordsTableSeeder::class);
         //$this->call(WordsTableSeeder::class, 1)->create();
         //$this->call(App\Word::class, 5)->create();
-        factory(App\Word::class, 2)->create();
+        //factory(App\Word::class, 2)->create();
+        factory(App\Word::class)->create();
     }
 }

@@ -14,7 +14,7 @@ use Symfony\Component\Console\Input\Input;
 
 class WordController extends Controller
 {
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -22,14 +22,14 @@ class WordController extends Controller
      */
     public function index()
     {
-    //$words = Word::get();
-    //$words = DB::Word->get();
+        //$words = Word::get();
+        //$words = DB::Word->get();
 
-    //with paginate
-    //$words = Word::simplePaginate(5);
-    $words = Word::get();
-    return view('words', compact('words'));
-    //return response()->json($words);
+        //with paginate
+        //$words = Word::simplePaginate(5);
+        $words = Word::get();
+        return view('words', compact('words'));
+        //return response()->json($words);
     }
 
     /**
@@ -50,16 +50,13 @@ class WordController extends Controller
      */
     public function store(Request $request)
     {
-      
+        Validator::make($request->all(), [
 
-
-                Validator::make($request->all(), [
-                   
                     'word'=>  'required|min:2|max:32|alpha',
-                   
+
                 ])->validate();
 
-      
+
 
         //$input = $request->all();
         //dd($input);
@@ -348,7 +345,8 @@ class WordController extends Controller
         //$request->flash('message', 'Successfully created word!');
         //Session::flash('message', 'Successfully created word!');
         //->withInput() adds the Request::flash() / $request->flash() automatically
-        return Redirect::to('game')->withInput();;
+        return Redirect::to('game')->withInput();
+        ;
 
         //return view('game', compact('rword'));
         /*
@@ -393,7 +391,6 @@ class WordController extends Controller
             return response()->json($word);
         }
         */
-
     }
     /**
      * Display the specified resource.
@@ -441,16 +438,25 @@ class WordController extends Controller
         //
     }
 
-        public function ajaxRequest()
-
+    public function ajaxRequest()
     {
-
         $lastword = DB::table('words')->get()->last();
 
-        //return response()->json($lastword);
-        return view('game', compact('lastword'));
-
+        return response()->json($lastword);
+        //return view('game', compact('lastword'));
     }
 
-   
+
+    public function postAjaxRequest()
+    {
+        $name = request('name');
+        $email= request('email');
+        $password= request('password');
+
+
+        //return response()->json($email);
+        return response()->json([$name, $password, $email]);
+
+        //return view('game', compact('lastword'));
+    }
 }

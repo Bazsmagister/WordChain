@@ -8,7 +8,7 @@
 <div class="container">
     <ul>
 
-        <li>{{$word -> id }}</li>
+        <li> Id :{{$word -> id }}</li>
         <li>{{$word -> a }} </li>
 
     </ul>
@@ -22,7 +22,7 @@
 
 <div class="container">
     <ul>
-        <li>{{$word -> id }}</li>
+        <li> Id: {{$word -> id }}</li>
         <li>{{$word -> b }} </li>
     </ul>
 </div>

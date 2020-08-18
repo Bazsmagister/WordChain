@@ -22,17 +22,12 @@
 
 <body>
 
-
-
     <div class="container">
 
         <h1>Laravel 5.7 Ajax Request example</h1>
 
-
-
         <form>
-
-
+            {{-- @csrf --}}
 
             <div class="form-group">
 
@@ -41,7 +36,6 @@
                 <input type="text" name="name" class="form-control" placeholder="Name" required="">
 
             </div>
-
 
 
             <div class="form-group">
@@ -53,7 +47,6 @@
             </div>
 
 
-
             <div class="form-group">
 
                 <strong>Email:</strong>
@@ -62,15 +55,11 @@
 
             </div>
 
-
-
             <div class="form-group">
 
                 <button class="btn btn-success btn-submit">Submit</button>
 
             </div>
-
-
 
         </form>
 
@@ -92,14 +81,9 @@
     });
 
 
-
     $(".btn-submit").click(function(e){
 
-
-
         e.preventDefault();
-
-
 
         var name = $("input[name=name]").val();
 
@@ -108,29 +92,26 @@
         var email = $("input[name=email]").val();
 
 
-
         $.ajax({
 
            type:'POST',
 
-           url:'/ajaxRequest',
+           url:'/postAjaxRequest',
 
            data:{name:name, password:password, email:email},
 
            success:function(data){
 
-              alert(data.success);
+               alert(data.success);
+              alert('hello');
 
            }
 
         });
 
-
-
 	});
 
 </script>
-
 
 
 </html>
